@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Todo</title>
-    <link rel="stylesheet" href="style,css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <div class="container">
+        <header>
       <nav>
         <h1>TO DO APP</h1>
         <h2>CHORES</h2>
       </nav>
       <div id="input">
-        <input type="text" placeholder="Add Item" />
-        <img src="add.png" alt="add task" />
+        <input type="text" placeholder="Add Item" id="addItem" />
+        <img src="add.png" alt="add task" id="addBtn"/>
       </div>
     </header>
     <main>
@@ -22,42 +23,46 @@
       <div class="task-container">
         <div class="task">
           <div class="one">
-            <input type="radio" name="" id="" />
+            <div class="first">
+                <input type="checkbox" name="" id="check" />
             <p class="each">Pick up mail</p>
+            </div>
+           <div>
+             <input type="date" id="date">
+           </div>
           </div>
           <div class="actions">
-            <img src="edit.png" alt="edit" />
+            <select name="categories" id="categories">
+            <option value="work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="wishlist">Wishlist</option>
+            <option value="vision">Vision</option>
+            <option value="goals">Goals</option>
+            <option value="faith">Faith</option>
+            <option value="others">Others</option>
+          </select>
+
+            <div>
+                <img src="edit.png" alt="edit" />
             <img src="delete.png" alt="delete" />
+            </div>
           </div>
         </div>
-        <div class="task">
-          <div class="one">
-            <input type="radio" name="" id="" />
-            <p class="each">Code</p>
-          </div>
-          <div class="actions">
-            <img src="edit.png" alt="edit" />
-            <img src="delete.png" alt="delete" />
-          </div>
-        </div>
-        <div class="task">
-          <div class="one">
-            <input type="radio" name="" id="" />
-            <p class="each">wash clothes</p>
-          </div>
-          <div class="actions">
-            <img src="edit.png" alt="edit" />
-            <img src="delete.png" alt="delete" />
-          </div>
-        </div>
+        
       </div>
     </main>
     <section class="completed">
+        <h5>COMPLETED</h5>
          <div class="finish">
-            <input type="radio" name="" id="" />
+            <div id="checkbox">
+            <input type="checkbox" name="" id="" />
             <p class="each">Pick up mail</p>
+            </div>
+            <p id="finishDate">22/12/2025</p>
           </div>
+          
     </section>
+    </div>
 
     <script type="module" src="app.js"></script>
   </body>
