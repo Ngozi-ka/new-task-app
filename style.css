@@ -24,6 +24,20 @@ header{
     gap: 2rem;
 }
 
+.new-container{
+    background: orangered;
+    margin-bottom: 2rem;
+    padding-top: 0.5rem;
+    border-radius: 5px;
+}
+
+.new{
+    display: flex;
+    justify-content: center;  
+    gap: 4rem;  
+    margin-bottom: 1rem;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -37,7 +51,7 @@ nav{
     padding: 0.5rem;
     background: rgba(1, 1, 49, 0.575);
     border-radius: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 #addItem{
@@ -104,7 +118,7 @@ input[type="checkbox"]:hover{
     justify-content: space-between;
 }
 
-.actions select{
+select, #date{
     outline: none;
     background: rgb(30, 100, 128);
     height: 1.8rem;

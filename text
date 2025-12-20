@@ -31,6 +31,7 @@
         <img src="add.png" alt="add task" id="addBtn"/>
       </div>
       </div>
+      
     </header>
     <main>
       <h5>TO DO</h5>
@@ -38,17 +39,10 @@
         <div class="task">
           <div class="one">
             <div class="first">
-                <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" id="check" />
             <p class="each">Pick up mail</p>
             </div>
-           <div>
-             <p>22/12/2025</p>
-           </div>
-          </div>
-          <div class="actions">
-           <p>Personal</p>
-
-            <div>
+            <div class="actions">
                 <img src="edit.png" alt="edit" />
             <img src="delete.png" alt="delete" />
             </div>
