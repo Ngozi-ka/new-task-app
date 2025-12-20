@@ -146,9 +146,20 @@ select, #date{
     align-items: center;
     color: whitesmoke;
     margin-bottom: 1.5rem;
+    text-decoration: 3px line-through orangered;
 }
 
 #checkbox{
     display: flex;
     gap: 1rem;
+    
+}
+
+.check{
+    text-decoration: 3px line-through orangered;
+}
+
+.finish-container{
+    display: flex;
+    flex-direction: column;
 }

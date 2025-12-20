@@ -4,6 +4,8 @@ const categories = document.getElementById("categories");
 const date = document.getElementById("date");
 const errorMsg = document.getElementById("errorMsg");
 const taskContainer = document.querySelector(".task-container");
+const checkedd = document.getElementById("checkedd");
+const finished = document.querySelector(".finish-container");
 
 addBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -13,13 +15,9 @@ addBtn.addEventListener("click", function (e) {
 
 const validate = function () {
   if (addItem.value === "" || categories.value === "" || date.value === "") {
-    // addBtn.disabled = true;
-    // errorMsg.style.display = "block"
     errorMsg.textContent = "Make sure to fill all gaps";
   } else {
-    // addBtn.disabled = false;
     errorMsg.textContent = "";
-    console.log("successful");
     saveData();
   }
 };
@@ -30,7 +28,7 @@ const saveData = function () {
   data["text"] = addItem.value;
   data["category"] = categories.value;
   data["date"] = date.value;
-  upload()
+  upload();
 };
 
 const upload = function () {
@@ -56,12 +54,13 @@ const upload = function () {
         </div>
 `;
 
-addItem.value = "";
-date.value = "";
+  addItem.value = "";
+  date.value = "";
 };
 
 let editTask = function (e) {
-  addItem.value = e.parentElement.parentElement.previousElementSibling.firstElementChild.children[1].innerHTML;
+  addItem.value =
+    e.parentElement.parentElement.previousElementSibling.firstElementChild.children[1].innerHTML;
   e.parentElement.parentElement.parentElement.remove();
 };
 
@@ -70,3 +69,26 @@ let deleteTask = function (e) {
 };
 
 
+checkedd.addEventListener("change", function(){
+  if(this.checked){
+    function finish(){
+      finished.innerHTML += `
+       <div class="finish">
+      <div id="checkbox">
+            <input type="checkbox" name="" id="" />
+            <p class="each check">Pick up mail</p>
+            </div>
+            <p id="finishDate">22/12/2025</p>
+            </div>
+      `
+    }
+    finish()
+    console.log("checked")
+  }else{
+    console.log("unchecked")
+  }
+})
+
+function toggle(e){
+
+}
