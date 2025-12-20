@@ -28,8 +28,9 @@
       </div>
       <div id="input">
         <input type="text" placeholder="Add Item" id="addItem" />
-        <img src="add.png" alt="add task" id="addBtn"/>
+        <button id="addBtn"><img src="add.png" alt="add task"/></button>
       </div>
+      <p id="errorMsg"></p>
       </div>
     </header>
     <main>
@@ -49,8 +50,8 @@
            <p>Personal</p>
 
             <div>
-                <img src="edit.png" alt="edit" />
-            <img src="delete.png" alt="delete" />
+                <button onClick="editTask(this)"><img src="edit.png" alt="edit" /></button>
+            <button onClick="deleteTask(this)"><img src="delete.png" alt="delete" /></button>
             </div>
           </div>
         </div>
@@ -70,6 +71,6 @@
     </section>
     </div>
 
-    <script type="module" src="app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

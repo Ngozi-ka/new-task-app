@@ -74,6 +74,14 @@ nav{
 #addBtn{
     background: rgb(30, 100, 128);
     border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+#errorMsg{
+    margin-left: 1rem;
+    color: blue;
+    font-weight: 700;
 }
 
 main h5, .completed h5{
@@ -116,6 +124,12 @@ input[type="checkbox"]:hover{
 .actions{
     display: flex;
     justify-content: space-between;
+}
+
+.actions > div > button{
+    background: transparent;
+    border: none;
+    outline: none;
 }
 
 select, #date{
