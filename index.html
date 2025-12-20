@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Todo</title>
-    <link rel="stylesheet" href="style,css">
-</head>
-<body>
-   
+    <link rel="stylesheet" href="style,css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>TO DO APP</h1>
+        <h2>CHORES</h2>
+      </nav>
+      <div id="input">
+        <input type="text" placeholder="Add Item" />
+        <img src="add.png" alt="add task" />
+      </div>
+    </header>
+    <main>
+      <h5>TO DO</h5>
+      <div class="task-container">
+        <div class="task">
+          <div class="one">
+            <input type="radio" name="" id="" />
+            <p class="each">Pick up mail</p>
+          </div>
+          <div class="actions">
+            <img src="edit.png" alt="edit" />
+            <img src="delete.png" alt="delete" />
+          </div>
+        </div>
+        <div class="task">
+          <div class="one">
+            <input type="radio" name="" id="" />
+            <p class="each">Code</p>
+          </div>
+          <div class="actions">
+            <img src="edit.png" alt="edit" />
+            <img src="delete.png" alt="delete" />
+          </div>
+        </div>
+        <div class="task">
+          <div class="one">
+            <input type="radio" name="" id="" />
+            <p class="each">wash clothes</p>
+          </div>
+          <div class="actions">
+            <img src="edit.png" alt="edit" />
+            <img src="delete.png" alt="delete" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="completed">
+         <div class="finish">
+            <input type="radio" name="" id="" />
+            <p class="each">Pick up mail</p>
+          </div>
+    </section>
 
     <script type="module" src="app.js"></script>
-</body>
+  </body>
 </html>
