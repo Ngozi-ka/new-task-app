@@ -9,13 +9,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .container{
     background: rgba(1, 1, 43, 0.89);
-    width: 30rem;
+    min-width: 40rem;
     padding: 2rem;
+    margin-top: 6rem;
 }
 
 header{
@@ -63,6 +64,7 @@ nav{
     font-weight: 700;
     font-size: 1rem;
     padding: 0 1rem;
+    width: 70%;
 }
 
 #addItem::placeholder{
@@ -121,9 +123,20 @@ input[type="checkbox"]:hover{
     cursor: pointer;
 }
 
+.each{
+    width: 90%;
+    font-size: 1.5rem;
+}
+
 .actions{
     display: flex;
     justify-content: space-between;
+}
+
+.actions p{
+    color: gray;
+    font-weight: 800;
+    font-size: 1.2rem;
 }
 
 .actions > div > button{
@@ -157,5 +170,28 @@ select, #date{
 
 .check{
     text-decoration: 3px line-through orangered;
+}
+
+@media(max-width: 42rem){
+    .container{
+    min-width: 25rem;
+    margin-top: 3rem;
+}
+
+nav > h1{
+    font-size: 1.2rem;
+}
+
+nav > h2{
+    font-size: 1rem;
+}
+
+.each{
+    font-size: 1.2rem;
+}
+
+.actions p{
+    font-size: 1rem;
+}
 }
 
