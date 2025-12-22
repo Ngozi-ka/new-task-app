@@ -4,7 +4,7 @@ const categories = document.getElementById("categories");
 const date = document.getElementById("date");
 const errorMsg = document.getElementById("errorMsg");
 const taskContainer = document.querySelector(".task-container");
-const checkedd = document.getElementById("checkedd");
+const checkedd = document.querySelector(".checkedd");
 const finished = document.querySelector(".finish-container");
 const each = document.querySelector(".each");
 const datee = document.querySelector(".datee");
@@ -38,7 +38,7 @@ const upload = function () {
 <div class="task">
           <div class="one">
             <div class="first">
-                <input type="checkbox" name="" id="checkedd" />
+                <input type="checkbox" name="" class="checkedd" />
             <p class="each">${data["text"]}</p>
             </div>
            <div>
@@ -70,36 +70,33 @@ let deleteTask = function (e) {
   e.parentElement.parentElement.parentElement.remove();
 };
 
-let info = {};
+// let info = {};
 
-let finishedInfo = function(){
-  info.text = each.textContent;
-  info.date = datee.textContent;
-}
+// let finishedInfo = function(){
+//   info.text = each.textContent;
+//   info.date = datee.textContent;
+// }
 
-checkedd.addEventListener("change", function(){
-  if(this.checked){
-   finishedInfo()
-    function finish(){
+taskContainer.addEventListener("change", function(e){
+
+if(!e.target.classList.contains("checkedd")) return;
+
+const task = e.target.closest(".task");
+const text = task.querySelector(".each").textContent;
+const date = task.querySelector(".datee").textContent;
+
+  if(e.target.checked){
       finished.innerHTML += `
        <div class="finish">
       <div id="checkbox">
             <input type="checkbox" name="" id="" />
-            <p class="each check">${info.text}</p>
+            <p class="eacch check">${text}</p>
             </div>
-            <p id="finishDate">${info.date}</p>
+            <p id="finishDate">${date}</p>
             </div>
       `
-
-      
-    }
-    finish()
+      e.target.closest(".task").remove()
     console.log("checked")
-  }else{
-    console.log("unchecked")
   }
 })
 
-function toggle(e){
-
-}
