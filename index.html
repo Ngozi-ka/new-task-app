@@ -8,77 +8,79 @@
   </head>
   <body>
     <div class="container">
-        <header>
-      <nav>
-        <h1>TO DO APP</h1>
-        <h2>CHORES</h2>
-      </nav>
-      <div class="new-container">
-      <div class="new">
-        <select name="categories" id="categories">
-            <option value="" disabled selected>Category</option>
-            <option value="Work">Work</option>
-            <option value="Personal">Personal</option>
-            <option value="Wishlist">Wishlist</option>
-            <option value="Vision">Vision</option>
-            <option value="Goals">Goals</option>
-            <option value="Faith">Faith</option>
-            <option value="Others">Others</option>
-          </select>
-          <input type="date" id="date">
-      </div>
-      <div id="input">
-        <input type="text" placeholder="Add Item" id="addItem" />
-        <button id="addBtn"><img src="add.png" alt="add task"/></button>
-      </div>
-      <p id="errorMsg"></p>
-      </div>
-    </header>
-    <main>
-      <h5>TO DO</h5>
-      <div class="task-container">
-        <div class="task">
-          <div class="one">
-            <div class="first">
-                <input type="checkbox" name="" class="checkedd" />
-            <p class="each" id="check">Pick up mail</p>
-            </div>
-           <div>
-             <p class="datee">22/12/2025</p>
-           </div>
+      <header>
+        <nav>
+          <h1>TO DO APP</h1>
+          <h2>CHORES</h2>
+        </nav>
+        <div class="new-container">
+          <div class="new">
+            <select name="categories" id="categories">
+              <option value="" disabled selected>Category</option>
+              <option value="Work">Work</option>
+              <option value="Personal">Personal</option>
+              <option value="Wishlist">Wishlist</option>
+              <option value="Vision">Vision</option>
+              <option value="Goals">Goals</option>
+              <option value="Faith">Faith</option>
+              <option value="Others">Others</option>
+            </select>
+            <input type="date" id="date" />
           </div>
-          <div class="actions">
-           <p>Personal</p>
+          <div id="input">
+            <input type="text" placeholder="Add Item" id="addItem" />
+            <button id="addBtn"><img src="add.png" alt="add task" /></button>
+          </div>
+          <p id="errorMsg"></p>
+        </div>
+      </header>
+      <main>
+        <h5>TO DO</h5>
+        <div class="task-container">
+          <div class="task">
+            <div class="one">
+              <div class="first">
+                <input type="checkbox" name="" class="checkedd" />
+                <p class="each" id="check">Continue watching Running Point</p>
+              </div>
+              <div>
+                <p class="datee">22/12/2025</p>
+              </div>
+            </div>
+            <div class="actions">
+              <p>Personal</p>
 
-            <div>
-                <button onClick="editTask(this)"><img src="edit.png" alt="edit" /></button>
-            <button onClick="deleteTask(this)"><img src="delete.png" alt="delete" /></button>
+              <div>
+                <button onClick="editTask(this)">
+                  <img src="edit.png" alt="edit" />
+                </button>
+                <button onClick="deleteTask(this)">
+                  <img src="delete.png" alt="delete" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        
-      </div>
-    </main>
-    <section class="completed">
+      </main>
+      <section class="completed">
         <h5>COMPLETED</h5>
         <div class="finish-container">
-         <div class="finish">
+          <div class="finish">
             <div id="checkbox">
-            <input type="checkbox" name="" class="finish-check" />
-            <p class="eacch check">Go to the mall</p>
+              <input type="checkbox" name="" class="finish-check" />
+              <p class="eacch check">Go to the mall</p>
             </div>
-            <p id="finishDate">22/12/2025</p>
+            <p id="finishDate">21/12/2025</p>
           </div>
           <div class="finish">
             <div id="checkbox">
-            <input type="checkbox" name="" class="finish-check />
-            <p class="eacch check">Pick up some fruits</p>
+              <input type="checkbox" name="" class="finish-check />
+              <p class="eacch check">Pick up some fruits</p>
             </div>
-            <p id="finishDate">22/12/2025</p>
+            <p id="finishDate">21/12/2025</p>
           </div>
-          </div>
-          
-    </section>
+        </div>
+      </section>
     </div>
 
     <script src="app.js"></script>

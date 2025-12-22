@@ -1,197 +1,196 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: skyblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+body {
+  background: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.container{
-    background: rgba(1, 1, 43, 0.89);
-    min-width: 40rem;
-    padding: 2rem;
-    margin-top: 6rem;
+.container {
+  background: rgba(1, 1, 43, 0.89);
+  min-width: 40rem;
+  padding: 2rem;
+  margin-top: 6rem;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.new-container{
-    background: orangered;
-    margin-bottom: 2rem;
-    padding-top: 0.5rem;
-    border-radius: 5px;
+.new-container {
+  background: orangered;
+  margin-bottom: 2rem;
+  padding-top: 0.5rem;
+  border-radius: 5px;
 }
 
-.new{
-    display: flex;
-    justify-content: center;  
-    gap: 4rem;  
-    margin-bottom: 1rem;
+.new {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 1rem;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    gap: 6rem;
-    color: gray;
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  color: gray;
 }
 
-#input{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-    background: rgba(1, 1, 49, 0.575);
-    border-radius: 2rem;
-    margin-bottom: 0.5rem;
+#input {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: rgba(1, 1, 49, 0.575);
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-#addItem{
-    width: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: whitesmoke;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 0 1rem;
-    width: 70%;
+#addItem {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0 1rem;
+  width: 70%;
 }
 
-#addItem::placeholder{
-    color: whitesmoke;
-    font-weight: 700;
-    font-size: 1rem;
+#addItem::placeholder {
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
-#addBtn{
-    background: rgb(30, 100, 128);
-    border-radius: 50%;
-    border: none;
-    outline: none;
+#addBtn {
+  background: rgb(30, 100, 128);
+  border-radius: 50%;
+  border: none;
+  outline: none;
 }
 
-#errorMsg{
-    margin-left: 1rem;
-    color: blue;
-    font-weight: 700;
+#errorMsg {
+  margin-left: 1rem;
+  color: blue;
+  font-weight: 700;
 }
 
-main h5, .completed h5{
-    color: gray;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+main h5,
+.completed h5 {
+  color: gray;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-.task{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    background: rgb(1, 1, 56);
-    padding: 1rem;
-    color: whitesmoke;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
+.task {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgb(1, 1, 56);
+  padding: 1rem;
+  color: whitesmoke;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
 }
 
-.one{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.first{
-    display: flex;
-    gap: 0.5rem;
-    
+.first {
+  display: flex;
+  gap: 0.5rem;
 }
 
-input[type="checkbox"]{
-    width: 1.5rem;
+input[type="checkbox"] {
+  width: 1.5rem;
 }
 
-input[type="checkbox"]:hover{
-    cursor: pointer;
+input[type="checkbox"]:hover {
+  cursor: pointer;
 }
 
-.each{
-    width: 90%;
-    font-size: 1.5rem;
+.each {
+  width: 90%;
+  font-size: 1.3rem;
 }
 
-.actions{
-    display: flex;
-    justify-content: space-between;
+.actions {
+  display: flex;
+  justify-content: space-between;
 }
 
-.actions p{
-    color: gray;
-    font-weight: 800;
-    font-size: 1.2rem;
+.actions p {
+  color: gray;
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 
-.actions > div > button{
-    background: transparent;
-    border: none;
-    outline: none;
+.actions > div > button {
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
-select, #date{
-    outline: none;
-    background: rgb(30, 100, 128);
-    height: 1.8rem;
-    color: white;
-    font-weight: 550;
+select,
+#date {
+  outline: none;
+  background: rgb(30, 100, 128);
+  height: 1.8rem;
+  color: white;
+  font-weight: 550;
 }
 
-.finish{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: whitesmoke;
-    margin-bottom: 1.5rem;
-    text-decoration: 3px line-through orangered;
+.finish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  margin-bottom: 1.5rem;
+  text-decoration: 3px line-through orangered;
 }
 
-#checkbox{
-    display: flex;
-    gap: 1rem;
-    
+#checkbox {
+  display: flex;
+  gap: 1rem;
 }
 
-.check{
-    text-decoration: 3px line-through orangered;
+.check {
+  text-decoration: 3px line-through orangered;
 }
 
-@media(max-width: 42rem){
-    .container{
+@media (max-width: 42rem) {
+  .container {
     min-width: 25rem;
     margin-top: 3rem;
-}
+  }
 
-nav > h1{
+  nav > h1 {
     font-size: 1.2rem;
-}
+  }
 
-nav > h2{
+  nav > h2 {
     font-size: 1rem;
-}
+  }
 
-.each{
+  .each {
     font-size: 1.2rem;
-}
+  }
 
-.actions p{
+  .actions p {
     font-size: 1rem;
+  }
 }
-}
-

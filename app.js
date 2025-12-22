@@ -70,23 +70,15 @@ let deleteTask = function (e) {
   e.parentElement.parentElement.parentElement.remove();
 };
 
-// let info = {};
+taskContainer.addEventListener("change", function (e) {
+  if (!e.target.classList.contains("checkedd")) return;
 
-// let finishedInfo = function(){
-//   info.text = each.textContent;
-//   info.date = datee.textContent;
-// }
+  const task = e.target.closest(".task");
+  const text = task.querySelector(".each").textContent;
+  const date = task.querySelector(".datee").textContent;
 
-taskContainer.addEventListener("change", function(e){
-
-if(!e.target.classList.contains("checkedd")) return;
-
-const task = e.target.closest(".task");
-const text = task.querySelector(".each").textContent;
-const date = task.querySelector(".datee").textContent;
-
-  if(e.target.checked){
-      finished.innerHTML += `
+  if (e.target.checked) {
+    finished.innerHTML += `
        <div class="finish">
       <div id="checkbox">
             <input type="checkbox" name="" class="finish-check" />
@@ -94,16 +86,14 @@ const date = task.querySelector(".datee").textContent;
             </div>
             <p id="finishDate">${date}</p>
             </div>
-      `
-      e.target.closest(".task").remove()
-    console.log("checked")
+      `;
+    e.target.closest(".task").remove();
+    console.log("checked");
   }
-})
+});
 
-
-finished.addEventListener("click", function(e){
-  if(e.target.classList.contains("finish-check")){
-    e.target.closest(".finish").remove()
+finished.addEventListener("click", function (e) {
+  if (e.target.classList.contains("finish-check")) {
+    e.target.closest(".finish").remove();
   }
-  
-})
+});
