@@ -89,7 +89,7 @@ const date = task.querySelector(".datee").textContent;
       finished.innerHTML += `
        <div class="finish">
       <div id="checkbox">
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" class="finish-check" />
             <p class="eacch check">${text}</p>
             </div>
             <p id="finishDate">${date}</p>
@@ -100,3 +100,10 @@ const date = task.querySelector(".datee").textContent;
   }
 })
 
+
+finished.addEventListener("click", function(e){
+  if(e.target.classList.contains("finish-check")){
+    e.target.closest(".finish").remove()
+  }
+  
+})
