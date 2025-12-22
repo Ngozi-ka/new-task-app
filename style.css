@@ -190,14 +190,14 @@ select,
 
   .each {
     font-size: 1rem;
-    width: 80%;
+    width: 70%;
   }
 
   .actions p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
-  .datee{
-    font-size: 0.9rem;
+  .datee {
+    font-size: 0.8rem;
   }
 }
