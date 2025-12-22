@@ -159,7 +159,3 @@ select, #date{
     text-decoration: 3px line-through orangered;
 }
 
-.finish-container{
-    display: flex;
-    flex-direction: column;
-}

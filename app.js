@@ -6,6 +6,8 @@ const errorMsg = document.getElementById("errorMsg");
 const taskContainer = document.querySelector(".task-container");
 const checkedd = document.getElementById("checkedd");
 const finished = document.querySelector(".finish-container");
+const each = document.querySelector(".each");
+const datee = document.querySelector(".datee");
 
 addBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -36,11 +38,11 @@ const upload = function () {
 <div class="task">
           <div class="one">
             <div class="first">
-                <input type="checkbox" name="" id="" />
+                <input type="checkbox" name="" id="checkedd" />
             <p class="each">${data["text"]}</p>
             </div>
            <div>
-             <p>${data["date"]}</p>
+             <p class="datee">${data["date"]}</p>
            </div>
           </div>
           <div class="actions">
@@ -68,19 +70,28 @@ let deleteTask = function (e) {
   e.parentElement.parentElement.parentElement.remove();
 };
 
+let info = {};
+
+let finishedInfo = function(){
+  info.text = each.textContent;
+  info.date = datee.textContent;
+}
 
 checkedd.addEventListener("change", function(){
   if(this.checked){
+   finishedInfo()
     function finish(){
       finished.innerHTML += `
        <div class="finish">
       <div id="checkbox">
             <input type="checkbox" name="" id="" />
-            <p class="each check">Pick up mail</p>
+            <p class="each check">${info.text}</p>
             </div>
-            <p id="finishDate">22/12/2025</p>
+            <p id="finishDate">${info.date}</p>
             </div>
       `
+
+      
     }
     finish()
     console.log("checked")
